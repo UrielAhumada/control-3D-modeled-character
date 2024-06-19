@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>three.js webgl - FBX loader</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="blocker">
+        <div id="instructions">
+            <p style="font-size:36px">
+                Click to play
+            </p>
+            <p>
+                Move: WASD<br />
+                Jump: SPACE<br />
+                Look: MOUSE
+            </p>
+            <p>1= Idle<br>
+                2= Walk<br>
+                3= Run<br>
+                4= Jump<br>
+                5= Dying</p>
+        </div>
+    </div>
+
+    <div class="light-control">
+        <label for="light-slider">Intencidad Luz:</label>
+        <input type="range" id="light-slider" min="0" max="10" value="5" step="0.1">
+    </div>
+
+    <div class="fog-control">
+        <label for="fog-slider">Dencidad Niebla:</label>
+        <input type="range" id="fog-slider" min="300" max="1500" value="1000" step="10">
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./build/three.module.js",
+                "three/addons/": "./jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
